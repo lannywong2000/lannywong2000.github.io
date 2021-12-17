@@ -97,18 +97,31 @@
 <h3 id="A-Prerequisites"><a href="#A-Prerequisites" class="headerlink" title="A. Prerequisites"></a>A. Prerequisites</h3><ol>
 <li>Git<br>To check, run <code>git -v</code> in Git Bash</li>
 <li>Node.js<br>To check, run <code>node -v</code> in Git Bash</li>
+<li><a target="_blank" rel="noopener" href="https://www.markdownguide.org/">Markdown Knowledge</a></li>
 </ol>
 <h3 id="B-Hexo-Configuration"><a href="#B-Hexo-Configuration" class="headerlink" title="B. Hexo Configuration"></a>B. Hexo Configuration</h3><p>Run the following commands in Git Bash.</p>
 <ol>
-<li>Install Hexo.<br><code>npm install hexo -g | hexo -v</code></li>
-<li>Install the deployer github.<br><code>npm install hexo-deployer-git --save</code></li>
-<li>Use Markdown syntax to add image to block.<br><code>npm install hexo-image-link --save</code> </li>
+<li>Install Hexo. Check using <code>hexo -v</code>  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo -g</span><br></pre></td></tr></table></figure></li>
+<li>Install the deployer github.  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></li>
+<li>This allow you to use Markdown syntax and relative address to add image to your blog.  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-image-link --save</span><br></pre></td></tr></table></figure></li>
 </ol>
-
+<h3 id="C-Set-Up-Your-Blog"><a href="#C-Set-Up-Your-Blog" class="headerlink" title="C. Set Up Your Blog"></a>C. Set Up Your Blog</h3><ol>
+<li>Create a folder for your blog, say <em>gitblog</em>.</li>
+<li><code>cd</code> into <em>gitblog</em>.</li>
+<li>Initialize a hexo environment using <code>hexo init</code>.</li>
+<li>Edit <em>_config.yml</em> in <em>gitblog</em>.  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#URL</span><br><span class="line">## Set your site url here. For example, if you use GitHub Page, set url as &#x27;https://username.github.io/project&#x27;</span><br><span class="line">url: http://&#123;yourusername&#125;.github.io</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">post_asset_folder: true</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:&#123;yourusername&#125;/&#123;yourusername&#125;.github.io.git</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure></li>
+<li>Generate static webpages.  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure></li>
+<li>Local preview.  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure></li>
+<li>Deploy.  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure></li>
+<li>You should now be able to access your blog online on https://{yourusername}.github.io.</li>
+</ol>
+<h3 id="D-More-Hexo"><a href="#D-More-Hexo" class="headerlink" title="D. More Hexo"></a>D. <a target="_blank" rel="noopener" href="https://hexo.io/docs/">More Hexo</a></h3>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lannywong2000.github.io/2021/12/17/Dirty-Hexo/" data-id="ckx9zpqfz000084z28nuzfsf1" data-title="Dirty Hexo" class="article-share-link">Share</a>
+      <a data-url="http://lannywong2000.github.io/2021/12/17/Dirty-Hexo/" data-id="ckxa0t8b700003wz2eb6t0iik" data-title="Dirty Hexo" class="article-share-link">Share</a>
       
       
       
@@ -176,7 +189,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lannywong2000.github.io/2021/12/17/OPC-UA-Introduction/" data-id="ckx9zpqg3000184z2f7bc0odb" data-title="OPC UA: Introduction" class="article-share-link">Share</a>
+      <a data-url="http://lannywong2000.github.io/2021/12/17/OPC-UA-Introduction/" data-id="ckxa0t8bg00033wz2acncemqb" data-title="OPC UA: Introduction" class="article-share-link">Share</a>
       
       
       
