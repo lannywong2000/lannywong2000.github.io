@@ -93,11 +93,54 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        
+        <p>This series are learning notes of the BRILLIANT videos <a target="_blank" rel="noopener" href="https://www.youtube.com/playlist?list=PLIrJJXPVFRvjHsA9tta8yULOB8nPUO_G7">Fundamentals of OPC UA</a> by <a target="_blank" rel="noopener" href="https://www.youtube.com/c/Industry40tvonline">Industry40tv</a> on YouTube.</p>
+<h2 id="Why-Information-Model"><a href="#Why-Information-Model" class="headerlink" title="Why Information Model?"></a>Why Information Model?</h2><p>Information modeling is key for <strong>smart Manufacturing</strong> for components to communicate with each others <strong>directly</strong> instead of hierarchically. This requires <strong>consistency</strong> in <strong>information representation</strong>.</p>
+
+
+<h2 id="Representing-Complex-Model"><a href="#Representing-Complex-Model" class="headerlink" title="Representing Complex Model"></a>Representing Complex Model</h2><ol>
+<li><p>Node: basic unit of information. </p>
+<ul>
+<li>Unique Node ID  <ul>
+<li>(index of) namespace uri </li>
+<li>identifier data type</li>
+<li>identifier</li>
+</ul>
+</li>
+<li>Actual data stored</li>
+<li>References to other nodes</li>
+</ul>
+</li>
+<li><p>Node Class Inheriting the Basic Node  </p>
+<ul>
+<li>Variable Node Class<br>  Holds actual data.</li>
+<li>Method Node Class<br>  Method or function called by clients.</li>
+<li><strong>Object Node Class</strong><br>  Real object <strong>class</strong> in real world.  <ul>
+<li>State: Variable Node Class</li>
+<li>Behavior: Method Node Class</li>
+</ul>
+</li>
+<li>ObjectType Node Class<br>  Real object <strong>object</strong> in real world.</li>
+</ul>
+<p> <img src="OPC-UA-Information-Model%5CInhetitance.PNG" alt="Inheritance"> </p>
+<ul>
+<li><p>Reference Type Node Class  </p>
+<ul>
+<li>Link Variable Node or Method Node to ObjectType Node.</li>
+</ul>
+<p>  <img src="OPC-UA-Information-Model%5CReference%20Link.PNG" alt="Reference Link"></p>
+<ul>
+<li>Indicate inheritance between Nodes.</li>
+</ul>
+<p>  <img src="OPC-UA-Information-Model%5CReference%20Inheritance.PNG" alt="Reference Inheritance"> </p>
+</li>
+</ul>
+</li>
+</ol>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lannywong2000.github.io/2021/12/17/OPC-UA-Information-Model/" data-id="ckxa519ro0001tgz2do3nego2" data-title="OPC UA: Information Model" class="article-share-link">Share</a>
+      <a data-url="http://lannywong2000.github.io/2021/12/17/OPC-UA-Information-Model/" data-id="ckxbcwpwy0003x4z2gh0z7pgl" data-title="OPC UA: Information Model" class="article-share-link">Share</a>
       
       
       
@@ -143,7 +186,7 @@
 <ol>
 <li>Install Hexo. Check using <code>hexo -v</code>  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo -g</span><br></pre></td></tr></table></figure></li>
 <li>Install the deployer github.  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></li>
-<li>This allow you to use Markdown syntax and relative address to add image to your blog.  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-image-link --save</span><br></pre></td></tr></table></figure></li>
+<li>This allow you to use Markdown syntax and relative path to add image to your blog.  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-image-link --save</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h2 id="C-Set-Up-Your-Blog"><a href="#C-Set-Up-Your-Blog" class="headerlink" title="C. Set Up Your Blog"></a>C. Set Up Your Blog</h2><ol>
 <li>Create a folder for your blog, say <em>gitblog</em>.</li>
@@ -161,7 +204,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lannywong2000.github.io/2021/12/17/Dirty-Hexo/" data-id="ckxa519rk0000tgz26rpy9ium" data-title="Dirty Hexo" class="article-share-link">Share</a>
+      <a data-url="http://lannywong2000.github.io/2021/12/17/Dirty-Hexo/" data-id="ckxbcwpw60000x4z225ml3ygj" data-title="Dirty Hexo" class="article-share-link">Share</a>
       
       
       
@@ -218,7 +261,10 @@
 <li>Simplified IT Integration</li>
 </ul>
 <h3 id="2-Pillars"><a href="#2-Pillars" class="headerlink" title="2 Pillars"></a>2 Pillars</h3><ul>
-<li><strong>Data Modelling</strong></li>
+<li>Data Modeling  <ul>
+<li><strong>Infromation Model</strong></li>
+</ul>
+</li>
 <li>Transportation Mechanism<ul>
 <li>Binary Encoded Messages over TCP Protocol</li>
 <li>XML Encoded Messages over HTTPS/SOAP Protocol</li>
@@ -229,7 +275,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lannywong2000.github.io/2021/12/17/OPC-UA-Introduction/" data-id="ckxa519rr0003tgz29l6e93u1" data-title="OPC UA: Introduction" class="article-share-link">Share</a>
+      <a data-url="http://lannywong2000.github.io/2021/12/17/OPC-UA-Introduction/" data-id="ckxbcwpws0001x4z2em0o9foe" data-title="OPC UA: Introduction" class="article-share-link">Share</a>
       
       
       
