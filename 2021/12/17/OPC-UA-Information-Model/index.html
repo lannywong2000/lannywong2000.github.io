@@ -13,17 +13,18 @@
 <meta property="og:site_name" content="Lanny Wong">
 <meta property="og:description" content="This series are learning notes of the BRILLIANT videos Fundamentals of OPC UA by Industry40tv on YouTube. Why Information Model?Information modeling is key for smart Manufacturing for components to co">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://lannywong2000.github.io/2021/12/17/OPC-UA-Information-Model/OPC-UA-Information-Model%5CInhetitance%20Map.PNG">
-<meta property="og:image" content="http://lannywong2000.github.io/2021/12/17/OPC-UA-Information-Model/OPC-UA-Information-Model%5CInhetitance.PNG">
-<meta property="og:image" content="http://lannywong2000.github.io/2021/12/17/OPC-UA-Information-Model/OPC-UA-Information-Model%5CReference%20Link.PNG">
-<meta property="og:image" content="http://lannywong2000.github.io/2021/12/17/OPC-UA-Information-Model/OPC-UA-Information-Model%5CReference%20Inheritance.PNG">
-<meta property="og:image" content="http://lannywong2000.github.io/2021/12/17/OPC-UA-Information-Model/OPC-UA-Information-Model%5CInformation%20Model.PNG">
+<meta property="og:image" content="http://lannywong2000.github.io/2021/12/17/OPC-UA-Information-Model/SmartManufacturing.PNG">
+<meta property="og:image" content="http://lannywong2000.github.io/2021/12/17/OPC-UA-Information-Model/InhetitanceMap.PNG">
+<meta property="og:image" content="http://lannywong2000.github.io/2021/12/17/OPC-UA-Information-Model/Inhetitance.PNG">
+<meta property="og:image" content="http://lannywong2000.github.io/2021/12/17/OPC-UA-Information-Model/ReferenceLink.PNG">
+<meta property="og:image" content="http://lannywong2000.github.io/2021/12/17/OPC-UA-Information-Model/ReferenceInheritance.PNG">
+<meta property="og:image" content="http://lannywong2000.github.io/2021/12/17/OPC-UA-Information-Model/InformationModel.PNG">
 <meta property="article:published_time" content="2021-12-17T06:46:28.000Z">
-<meta property="article:modified_time" content="2021-12-18T05:19:58.248Z">
+<meta property="article:modified_time" content="2021-12-18T05:30:17.472Z">
 <meta property="article:author" content="Lanny Wong">
 <meta property="article:tag" content="OPC UA">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://lannywong2000.github.io/2021/12/17/OPC-UA-Information-Model/OPC-UA-Information-Model%5CInhetitance%20Map.PNG">
+<meta name="twitter:image" content="http://lannywong2000.github.io/2021/12/17/OPC-UA-Information-Model/SmartManufacturing.PNG">
   
     <link rel="alternate" href="/atom.xml" title="Lanny Wong" type="application/atom+xml">
   
@@ -104,7 +105,7 @@
       
         <p>This series are learning notes of the BRILLIANT videos <a target="_blank" rel="noopener" href="https://www.youtube.com/playlist?list=PLIrJJXPVFRvjHsA9tta8yULOB8nPUO_G7">Fundamentals of OPC UA</a> by <a target="_blank" rel="noopener" href="https://www.youtube.com/c/Industry40tvonline">Industry40tv</a> on YouTube.</p>
 <h2 id="Why-Information-Model"><a href="#Why-Information-Model" class="headerlink" title="Why Information Model?"></a>Why Information Model?</h2><p>Information modeling is key for <strong>smart Manufacturing</strong> for components to communicate with each others <strong>directly</strong> instead of hierarchically. This requires <strong>consistency</strong> in <strong>information representation</strong>.</p>
-
+<img src="/2021/12/17/OPC-UA-Information-Model/SmartManufacturing.PNG" class="" title="Smart Manufacturing">
 
 <h2 id="Representing-Complex-Model"><a href="#Representing-Complex-Model" class="headerlink" title="Representing Complex Model"></a>Representing Complex Model</h2><ol>
 <li><p>Base Node Class: basic unit of information. </p>
@@ -124,7 +125,8 @@
 </ul>
 </li>
 <li><p>Node Classes Inherits from the Basic Node Class  </p>
-<p> <img src="OPC-UA-Information-Model%5CInhetitance%20Map.PNG" alt="Inheritance Map"></p>
+ <img src="/2021/12/17/OPC-UA-Information-Model/InhetitanceMap.PNG" class="" title="Inheritance Map">
+
 <ul>
 <li>Variable Node Class<br>  Holds actual data.</li>
 <li>Method Node Class<br>  Method or function called by clients.</li>
@@ -135,28 +137,29 @@
 </li>
 <li>ObjectType Node Class<br>  Real object <strong>object</strong> in real world.</li>
 </ul>
-<p> <img src="OPC-UA-Information-Model%5CInhetitance.PNG" alt="Inheritance"> </p>
+ <img src="/2021/12/17/OPC-UA-Information-Model/Inhetitance.PNG" class="" title="Inheritance"> 
+
 <ul>
 <li><p>Reference Type Node Class  </p>
 <ul>
 <li>Link Variable Node or Method Node to ObjectType Node.</li>
 </ul>
-<p>  <img src="OPC-UA-Information-Model%5CReference%20Link.PNG" alt="Reference Link"></p>
+  <img src="/2021/12/17/OPC-UA-Information-Model/ReferenceLink.PNG" class="" title="Reference Link">
+
 <ul>
 <li>Indicate inheritance between Nodes.</li>
 </ul>
-<p>  <img src="OPC-UA-Information-Model%5CReference%20Inheritance.PNG" alt="Reference Inheritance"></p>
-</li>
+  <img src="/2021/12/17/OPC-UA-Information-Model/ReferenceInheritance.PNG" class="" title="Reference Inheritance"></li>
 </ul>
 </li>
 </ol>
 <h2 id="Information-Model"><a href="#Information-Model" class="headerlink" title="Information Model"></a>Information Model</h2><p>Use <strong>XML</strong> to create specific information model.</p>
-<p><img src="OPC-UA-Information-Model%5CInformation%20Model.PNG" alt="Information Model"></p>
+<img src="/2021/12/17/OPC-UA-Information-Model/InformationModel.PNG" class="" title="Information Model">
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lannywong2000.github.io/2021/12/17/OPC-UA-Information-Model/" data-id="ckxbdga020001m0z22ohsfa1z" data-title="OPC UA: Information Model" class="article-share-link">Share</a>
+      <a data-url="http://lannywong2000.github.io/2021/12/17/OPC-UA-Information-Model/" data-id="ckxbdtms00003f4z28tfgdl05" data-title="OPC UA: Information Model" class="article-share-link">Share</a>
       
       
       
@@ -167,6 +170,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2021/12/18/OPC-UA-Client-Server-Communication/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          OPC UA: Client Server Communication
+        
+      </div>
+    </a>
   
   
     <a href="/2021/12/17/Dirty-Hexo/" id="article-nav-older" class="article-nav-link-wrap">
@@ -221,6 +233,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2021/12/18/OPC-UA-Client-Server-Communication/">OPC UA: Client Server Communication</a>
+          </li>
         
           <li>
             <a href="/2021/12/17/OPC-UA-Information-Model/">OPC UA: Information Model</a>

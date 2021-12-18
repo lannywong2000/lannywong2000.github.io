@@ -71,6 +71,47 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-OPC-UA-Client-Server-Communication" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/12/18/OPC-UA-Client-Server-Communication/" class="article-date">
+  <time class="dt-published" datetime="2021-12-18T05:21:42.000Z" itemprop="datePublished">2021-12-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/12/18/OPC-UA-Client-Server-Communication/">OPC UA: Client Server Communication</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>This series are learning notes of the BRILLIANT videos <a target="_blank" rel="noopener" href="https://www.youtube.com/playlist?list=PLIrJJXPVFRvjHsA9tta8yULOB8nPUO_G7">Fundamentals of OPC UA</a> by <a target="_blank" rel="noopener" href="https://www.youtube.com/c/Industry40tvonline">Industry40tv</a> on YouTube.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://lannywong2000.github.io/2021/12/18/OPC-UA-Client-Server-Communication/" data-id="ckxbdtmrx0001f4z215z35ais" data-title="OPC UA: Client Server Communication" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OPC-UA/" rel="tag">OPC UA</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-OPC-UA-Information-Model" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2021/12/17/OPC-UA-Information-Model/" class="article-date">
@@ -95,7 +136,7 @@
       
         <p>This series are learning notes of the BRILLIANT videos <a target="_blank" rel="noopener" href="https://www.youtube.com/playlist?list=PLIrJJXPVFRvjHsA9tta8yULOB8nPUO_G7">Fundamentals of OPC UA</a> by <a target="_blank" rel="noopener" href="https://www.youtube.com/c/Industry40tvonline">Industry40tv</a> on YouTube.</p>
 <h2 id="Why-Information-Model"><a href="#Why-Information-Model" class="headerlink" title="Why Information Model?"></a>Why Information Model?</h2><p>Information modeling is key for <strong>smart Manufacturing</strong> for components to communicate with each others <strong>directly</strong> instead of hierarchically. This requires <strong>consistency</strong> in <strong>information representation</strong>.</p>
-
+<img src="/2021/12/17/OPC-UA-Information-Model/SmartManufacturing.PNG" class="" title="Smart Manufacturing">
 
 <h2 id="Representing-Complex-Model"><a href="#Representing-Complex-Model" class="headerlink" title="Representing Complex Model"></a>Representing Complex Model</h2><ol>
 <li><p>Base Node Class: basic unit of information. </p>
@@ -115,7 +156,8 @@
 </ul>
 </li>
 <li><p>Node Classes Inherits from the Basic Node Class  </p>
-<p> <img src="OPC-UA-Information-Model%5CInhetitance%20Map.PNG" alt="Inheritance Map"></p>
+ <img src="/2021/12/17/OPC-UA-Information-Model/InhetitanceMap.PNG" class="" title="Inheritance Map">
+
 <ul>
 <li>Variable Node Class<br>  Holds actual data.</li>
 <li>Method Node Class<br>  Method or function called by clients.</li>
@@ -126,28 +168,29 @@
 </li>
 <li>ObjectType Node Class<br>  Real object <strong>object</strong> in real world.</li>
 </ul>
-<p> <img src="OPC-UA-Information-Model%5CInhetitance.PNG" alt="Inheritance"> </p>
+ <img src="/2021/12/17/OPC-UA-Information-Model/Inhetitance.PNG" class="" title="Inheritance"> 
+
 <ul>
 <li><p>Reference Type Node Class  </p>
 <ul>
 <li>Link Variable Node or Method Node to ObjectType Node.</li>
 </ul>
-<p>  <img src="OPC-UA-Information-Model%5CReference%20Link.PNG" alt="Reference Link"></p>
+  <img src="/2021/12/17/OPC-UA-Information-Model/ReferenceLink.PNG" class="" title="Reference Link">
+
 <ul>
 <li>Indicate inheritance between Nodes.</li>
 </ul>
-<p>  <img src="OPC-UA-Information-Model%5CReference%20Inheritance.PNG" alt="Reference Inheritance"></p>
-</li>
+  <img src="/2021/12/17/OPC-UA-Information-Model/ReferenceInheritance.PNG" class="" title="Reference Inheritance"></li>
 </ul>
 </li>
 </ol>
 <h2 id="Information-Model"><a href="#Information-Model" class="headerlink" title="Information Model"></a>Information Model</h2><p>Use <strong>XML</strong> to create specific information model.</p>
-<p><img src="OPC-UA-Information-Model%5CInformation%20Model.PNG" alt="Information Model"></p>
+<img src="/2021/12/17/OPC-UA-Information-Model/InformationModel.PNG" class="" title="Information Model">
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lannywong2000.github.io/2021/12/17/OPC-UA-Information-Model/" data-id="ckxbdga020001m0z22ohsfa1z" data-title="OPC UA: Information Model" class="article-share-link">Share</a>
+      <a data-url="http://lannywong2000.github.io/2021/12/17/OPC-UA-Information-Model/" data-id="ckxbdtms00003f4z28tfgdl05" data-title="OPC UA: Information Model" class="article-share-link">Share</a>
       
       
       
@@ -183,7 +226,7 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>Hexo is a cool way to set up your own blog on github despite its baffling configuration. Ready to get your hands dirty?</p>
+        <p>Hexo is a cool way to set up your own blog on GitHub despite its baffling configuration. Ready to get your hands dirty?</p>
 <h2 id="A-Prerequisites"><a href="#A-Prerequisites" class="headerlink" title="A. Prerequisites"></a>A. Prerequisites</h2><ol>
 <li>Git<br>To check, run <code>git -v</code> in Git Bash</li>
 <li>Node.js<br>To check, run <code>node -v</code> in Git Bash</li>
@@ -192,7 +235,7 @@
 <h2 id="B-Hexo-Configuration"><a href="#B-Hexo-Configuration" class="headerlink" title="B. Hexo Configuration"></a>B. Hexo Configuration</h2><p>Run the following commands in Git Bash.</p>
 <ol>
 <li>Install Hexo. Check using <code>hexo -v</code>  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo -g</span><br></pre></td></tr></table></figure></li>
-<li>Install the deployer github.  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></li>
+<li>Install the deployer for GitHub.  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></li>
 <li>This allow you to use Markdown syntax and relative path to add image to your blog.  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-image-link --save</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h2 id="C-Set-Up-Your-Blog"><a href="#C-Set-Up-Your-Blog" class="headerlink" title="C. Set Up Your Blog"></a>C. Set Up Your Blog</h2><ol>
@@ -211,7 +254,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lannywong2000.github.io/2021/12/17/Dirty-Hexo/" data-id="ckxbdg9zy0000m0z28i4phgwj" data-title="Dirty Hexo" class="article-share-link">Share</a>
+      <a data-url="http://lannywong2000.github.io/2021/12/17/Dirty-Hexo/" data-id="ckxbdtmrs0000f4z2fdiwh5ff" data-title="Dirty Hexo" class="article-share-link">Share</a>
       
       
       
@@ -250,9 +293,9 @@
         <p>This series are learning notes of the BRILLIANT videos <a target="_blank" rel="noopener" href="https://www.youtube.com/playlist?list=PLIrJJXPVFRvjHsA9tta8yULOB8nPUO_G7">Fundamentals of OPC UA</a> by <a target="_blank" rel="noopener" href="https://www.youtube.com/c/Industry40tvonline">Industry40tv</a> on YouTube.</p>
 <h2 id="Classic-OPC"><a href="#Classic-OPC" class="headerlink" title="Classic OPC"></a>Classic OPC</h2><img src="/2021/12/17/OPC-UA-Introduction/ClassicOPC.PNG" class="" title="Classic OPC">
 
-<p>Classic OPC was a <strong>Standard Interface</strong> solving driver diversity problems using <strong>Component Object Model (COM)</strong> and <strong>Distributed Component Object Model (DCOM)</strong> to communicate between application server and client on the same and seperate <strong>Windows PCs</strong>.</p>
+<p>Classic OPC was a <strong>Standard Interface</strong> solving driver diversity problems using <strong>Component Object Model (COM)</strong> and <strong>Distributed Component Object Model (DCOM)</strong> to communicate between application server and client on the same and separate <strong>Windows PCs</strong>.</p>
 <h2 id="OPC-UA"><a href="#OPC-UA" class="headerlink" title="OPC UA"></a>OPC UA</h2><p><em><strong>IS NOT A PROTOCOL!</strong></em></p>
-<h3 id="4-Core-Characterisctics"><a href="#4-Core-Characterisctics" class="headerlink" title="4 Core Characterisctics"></a>4 Core Characterisctics</h3><ul>
+<h3 id="4-Core-Characteristics"><a href="#4-Core-Characteristics" class="headerlink" title="4 Core Characteristics"></a>4 Core Characteristics</h3><ul>
 <li>Cross Platform &amp; Internet Ready<ul>
 <li>Support Various Systems</li>
 <li>TCP and HTTP Server/Client Communication</li>
@@ -269,7 +312,7 @@
 </ul>
 <h3 id="2-Pillars"><a href="#2-Pillars" class="headerlink" title="2 Pillars"></a>2 Pillars</h3><ul>
 <li>Data Modeling  <ul>
-<li><strong>Infromation Model</strong></li>
+<li><strong>Information Model</strong></li>
 </ul>
 </li>
 <li>Transportation Mechanism<ul>
@@ -282,7 +325,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lannywong2000.github.io/2021/12/17/OPC-UA-Introduction/" data-id="ckxbdga050003m0z2aswihg4y" data-title="OPC UA: Introduction" class="article-share-link">Share</a>
+      <a data-url="http://lannywong2000.github.io/2021/12/17/OPC-UA-Introduction/" data-id="ckxbdtms30009f4z2g4kogon3" data-title="OPC UA: Introduction" class="article-share-link">Share</a>
       
       
       
@@ -339,6 +382,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2021/12/18/OPC-UA-Client-Server-Communication/">OPC UA: Client Server Communication</a>
+          </li>
         
           <li>
             <a href="/2021/12/17/OPC-UA-Information-Model/">OPC UA: Information Model</a>
