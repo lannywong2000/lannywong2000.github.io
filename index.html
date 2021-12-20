@@ -130,7 +130,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lannywong2000.github.io/2021/12/18/LeetCode-Top300/" data-id="ckxdl7r6b000110z2f2lmh3ks" data-title="LeetCode Top300" class="article-share-link">Share</a>
+      <a data-url="http://lannywong2000.github.io/2021/12/18/LeetCode-Top300/" data-id="ckxe69uql0003ysz29c3v1i3v" data-title="LeetCode Top300" class="article-share-link">Share</a>
       
       
       
@@ -184,12 +184,85 @@
 </ol>
 <h3 id="OPC-UA-Request-and-Response-Headers"><a href="#OPC-UA-Request-and-Response-Headers" class="headerlink" title="OPC UA Request and Response Headers"></a>OPC UA Request and Response Headers</h3><img src="/2021/12/18/OPC-UA-Client-Server-Communication/Headers.PNG" class="" title="Headers">
 
+<h3 id="Establishing-a-Stateful-OPC-UA-Client-Server-Connection"><a href="#Establishing-a-Stateful-OPC-UA-Client-Server-Connection" class="headerlink" title="Establishing a Stateful OPC UA Client-Server Connection"></a>Establishing a Stateful OPC UA Client-Server Connection</h3><img src="/2021/12/18/OPC-UA-Client-Server-Communication/StatefulConnection.PNG" class="" title="StatefulConnection">
 
+<p>The <strong>Transport Channel</strong> and <strong>Secure Channel</strong> are completely handled by <strong>OPC UA Stack</strong>. There are also Stateless OPC UA implements.</p>
+<h2 id="OPC-UA-Services"><a href="#OPC-UA-Services" class="headerlink" title="OPC UA Services"></a>OPC UA Services</h2><p>There are 37 services in the OPC UA service sets.</p>
+<h3 id="1-Discovery-Service-Set"><a href="#1-Discovery-Service-Set" class="headerlink" title="1. Discovery Service Set"></a>1. Discovery Service Set</h3><img src="/2021/12/18/OPC-UA-Client-Server-Communication/Discovery.PNG" class="" title="OPC UA Discovery">
+
+<ul>
+<li>FindServers Service</li>
+<li>FindServersOnNetwork Service</li>
+<li>GetEndpoints Service</li>
+<li>RegisterServer Service</li>
+<li>RegisterServer2 Service</li>
+</ul>
+<h3 id="2-SecureChannel-Service-Set"><a href="#2-SecureChannel-Service-Set" class="headerlink" title="2. SecureChannel Service Set"></a>2. SecureChannel Service Set</h3><p>Create a secure channel, implemented on OPC UA Stack.</p>
+<ul>
+<li>OpenSecureChannel Service</li>
+<li>CloseSecureChannel Service</li>
+</ul>
+<h3 id="3-Session-Service-Set"><a href="#3-Session-Service-Set" class="headerlink" title="3. Session Service Set"></a>3. Session Service Set</h3><p>Create a session channel to establish rules of communication between clients and servers at OPC UA application level.</p>
+<ul>
+<li>CreateSession Service</li>
+<li>ActivateSession Service</li>
+<li>CloseSession Service</li>
+<li>CancelSession Service</li>
+</ul>
+<h3 id="4-NodeManagement-Service-Set"><a href="#4-NodeManagement-Service-Set" class="headerlink" title="4. NodeManagement Service Set"></a>4. NodeManagement Service Set</h3><p>For clients to add or delete nodes and references on OPC UA server address space.</p>
+<ul>
+<li>AddNodes Service</li>
+<li>AddReferences Service</li>
+<li>DeleteNodes Service</li>
+<li>DeleteReferences Service</li>
+</ul>
+<h3 id="5-View-Service-Set"><a href="#5-View-Service-Set" class="headerlink" title="5. View Service Set"></a>5. View Service Set</h3><p>For clients yo navigate through OPC UA server address space and consume information.</p>
+<ul>
+<li>Browse Service</li>
+<li>BrowseNext Service</li>
+<li>TranslateBrowsePathsToNodeIds Service<img src="/2021/12/18/OPC-UA-Client-Server-Communication/NodeIdTranslation.PNG" class="" title="NodeIdTranslation"></li>
+<li>RegisterNodes Service</li>
+<li>UnregisterNodes Service</li>
+</ul>
+<h3 id="6-Query-Service-Set"><a href="#6-Query-Service-Set" class="headerlink" title="6. Query Service Set"></a>6. Query Service Set</h3><p>Allow clients to issue queries to servers to access stored data.</p>
+<ul>
+<li>QueryFirst Service</li>
+<li>QueryNext Service</li>
+</ul>
+<h3 id="7-Attribute-Service-Set"><a href="#7-Attribute-Service-Set" class="headerlink" title="7. Attribute Service Set"></a>7. Attribute Service Set</h3><p>Enable clients to access attributes of nodes for reading and writing purposes.</p>
+<ul>
+<li>Read Service</li>
+<li>Write Service</li>
+<li>HistoryRead Service</li>
+<li>HistoryUpdate Service</li>
+</ul>
+<h3 id="8-Method-Service-Set"><a href="#8-Method-Service-Set" class="headerlink" title="8. Method Service Set"></a>8. Method Service Set</h3><p>For clients to invoke exposed methods</p>
+<ul>
+<li>Call Service</li>
+</ul>
+<h3 id="9-MonitoredItem-Service-Set"><a href="#9-MonitoredItem-Service-Set" class="headerlink" title="9. MonitoredItem Service Set"></a>9. MonitoredItem Service Set</h3><p>Define services that allow clients to create, modify and delete <strong>monitored items</strong> used to monitor attributes for value changes and objects for events.</p>
+<ul>
+<li>CreateMonitoredItems Service</li>
+<li>ModifyMonitoredItems Service</li>
+<li>SetMonitoringMode Service</li>
+<li>SetTriggering Service</li>
+<li>DeleteMonitoredItems Service</li>
+</ul>
+<h3 id="10-Subscription-Service-Set"><a href="#10-Subscription-Service-Set" class="headerlink" title="10. Subscription Service Set"></a>10. Subscription Service Set</h3><p>In OPC UA, subscriptions are entities that issue notification messages periodically for the monitoring items assigned to them.</p>
+<ul>
+<li>CreateSubscription Service</li>
+<li>ModifySubscription Service</li>
+<li>SetPublishingMode Service</li>
+<li>Publish Service</li>
+<li>Republish Service</li>
+<li>TransferSubscription Service</li>
+<li>DeleteSubscription Service</li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lannywong2000.github.io/2021/12/18/OPC-UA-Client-Server-Communication/" data-id="ckxdl7r6f000610z2fr8a8nok" data-title="OPC UA: Client Server Communication" class="article-share-link">Share</a>
+      <a data-url="http://lannywong2000.github.io/2021/12/18/OPC-UA-Client-Server-Communication/" data-id="ckxe69uqm0004ysz271qm0q7q" data-title="OPC UA: Client Server Communication" class="article-share-link">Share</a>
       
       
       
@@ -281,7 +354,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lannywong2000.github.io/2021/12/17/OPC-UA-Information-Model/" data-id="ckxdl7r6g000710z28k3q5npu" data-title="OPC UA: Information Model" class="article-share-link">Share</a>
+      <a data-url="http://lannywong2000.github.io/2021/12/17/OPC-UA-Information-Model/" data-id="ckxe69uqo0006ysz27uvzfdgg" data-title="OPC UA: Information Model" class="article-share-link">Share</a>
       
       
       
@@ -345,7 +418,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lannywong2000.github.io/2021/12/17/Dirty-Hexo/" data-id="ckxdl7r66000010z25ye65ikp" data-title="Dirty Hexo" class="article-share-link">Share</a>
+      <a data-url="http://lannywong2000.github.io/2021/12/17/Dirty-Hexo/" data-id="ckxe69uq40000ysz22rlz5djr" data-title="Dirty Hexo" class="article-share-link">Share</a>
       
       
       
@@ -416,7 +489,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lannywong2000.github.io/2021/12/17/OPC-UA-Introduction/" data-id="ckxdl7r6h000910z27dfkh6rd" data-title="OPC UA: Introduction" class="article-share-link">Share</a>
+      <a data-url="http://lannywong2000.github.io/2021/12/17/OPC-UA-Introduction/" data-id="ckxe69uqq0007ysz2c07wdu10" data-title="OPC UA: Introduction" class="article-share-link">Share</a>
       
       
       
