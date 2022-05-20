@@ -93,11 +93,102 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        
+        <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+<ul>
+<li><a href="#b-tree">B+ Tree</a><ul>
+<li><a href="#insertion">Insertion</a></li>
+<li><a href="#deletion">Deletion</a></li>
+</ul>
+</li>
+</ul>
+<!-- /code_chunk_output -->
+
+<h1 id="B-Tree"><a href="#B-Tree" class="headerlink" title="B+ Tree"></a>B+ Tree</h1><p>B+ Tree is a <strong>balanced</strong> tree that is frequently used for <strong>indexing</strong> in disk management and database system.</p>
+<ul>
+<li>A B+ tree node is a <strong>page</strong> containing <strong>sorted numbers</strong>.</li>
+<li> There are <strong>several</strong> levels of <strong>index page</strong> but <strong>one</strong> level of <strong>leaf page</strong>.</li>
+<li> All values are stored and sorted in <strong>leaf pages</strong>.</li>
+</ul>
+<p>Below is a B+ tree with height of 2, page capacity of 4 and fan out of 5.</p>
+<img src="/2022/05/20/B-Tree/1.png" class="" title="Sample B+ Tree">
+
+<h2 id="Insertion"><a href="#Insertion" class="headerlink" title="Insertion"></a>Insertion</h2><p>There are 3 scenarios of insertions as shown below.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Type</th>
+<th align="center">Leaf Page Full</th>
+<th align="center">Index Page Full</th>
+<th align="center">Operations</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center">No</td>
+<td align="center">No</td>
+<td align="center">Insert into <strong>leaf page</strong>.</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">Yes</td>
+<td align="center">No</td>
+<td align="center">1. Breakdown <strong>leaf page</strong>.<br>2. Insert <strong>mid-value</strong> into <strong>index page</strong>.<br>3. Insert values <strong>smaller</strong> than mid-value into <strong>left leaf page</strong>.<br>4. Insert values <strong>larger</strong> than or <strong>equal</strong> to mid-value into <strong>right leaf page</strong>.<br>or<br><strong>Rotate</strong> when <strong>sibling leaf pages</strong> are <strong>NOT</strong> full.</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">Yes</td>
+<td align="center">Yes</td>
+<td align="center">1. Breakdown <strong>leaf page</strong>.<br>2. Insert values <strong>smaller</strong> than mid-value into <strong>left leaf page</strong>.<br>3. Insert values <strong>larger</strong> than or <strong>equal</strong> to mid-value into <strong>right leaf page</strong>.<br>4. Breakdown <strong>index page</strong><br>5. Insert mid-value into <strong>higher index page</strong><br>5. Insert values <strong>smaller</strong> than mid-value into <strong>left index page</strong>.<br>6. Insert values <strong>larger</strong> than or <strong>equal</strong> to mid-value into <strong>right index page</strong>.</td>
+</tr>
+</tbody></table>
+<ol>
+<li>Insert 28: Type 0<br><img src="/B-Tree/2.png" alt="Insert 28">   </li>
+<li>Insert 70: Type 1<br><img src="/B-Tree/3.png" alt="Insert 70">  </li>
+<li>Insert 70: Rotate<br><img src="/B-Tree/5.png" alt="Rotate 70"></li>
+<li>Insert 95: Type 2<br><img src="/B-Tree/4.png" alt="Insert 95"></li>
+</ol>
+<h2 id="Deletion"><a href="#Deletion" class="headerlink" title="Deletion"></a>Deletion</h2><p>There are also 3 scenarios of deletion based on <strong>fill factor</strong>. The minimum setting for fill factor is <strong>0.5</strong>.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Type</th>
+<th align="center">Leaf Page Below Fill Factor</th>
+<th align="center">Index Page Below Fill Factor</th>
+<th align="center">Operations</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center">No</td>
+<td align="center">No</td>
+<td align="center">Delete from <strong>leaf page</strong>. If the value is also in <strong>index page</strong>, replace it with value to its <strong>immediate right</strong>.</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">Yes</td>
+<td align="center">No</td>
+<td align="center"><strong>Merge</strong> leaf page with its siblings, <strong>update</strong> index page.</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">Yes</td>
+<td align="center">No</td>
+<td align="center">1. <strong>Merge</strong> leaf page with its siblings.<br>2. <strong>Update</strong> index page.<br>3. <strong>Merge</strong> index page and its siblings.</td>
+</tr>
+</tbody></table>
+<ol>
+<li>Delete 70: Type 0, value <strong>NOT</strong> in index page<br><img src="/B-Tree/6.png" alt="Delete 70"></li>
+<li>Delete 25: Type 0, value in index page<br><img src="/B-Tree/7.png" alt="Delete 25"></li>
+<li>Delete 60: Type 1<br><img src="/B-Tree/8.png" alt="Delete 60"></li>
+</ol>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lannywong2000.github.io/2022/05/20/B-Tree/" data-id="cl3ejke0c0000jsz25bssczn9" data-title="B+ Tree" class="article-share-link">Share</a>
+      <a data-url="http://lannywong2000.github.io/2022/05/20/B-Tree/" data-id="cl3ensxmu0000ywz2ha014up0" data-title="B+ Tree" class="article-share-link">Share</a>
       
       
       
@@ -148,7 +239,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lannywong2000.github.io/2021/12/24/Fully-Convolutional-Networks/" data-id="cl3ejke0k0003jsz2hifqbkgi" data-title="Fully Convolutional Networks" class="article-share-link">Share</a>
+      <a data-url="http://lannywong2000.github.io/2021/12/24/Fully-Convolutional-Networks/" data-id="cl3ensxo10003ywz25z8f4a1i" data-title="Fully Convolutional Networks" class="article-share-link">Share</a>
       
       
       
@@ -185,6 +276,184 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <p>LeetCode’s Top300 problems in 2021. Keep track of my progress.</p>
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+<ul>
+<li><a href="#linked-list">Linked List</a><ul>
+<li><a href="#singly-linked-list">Singly Linked List</a><ul>
+<li><a href="#easy">Easy</a></li>
+<li><a href="#medium">Medium</a></li>
+<li><a href="#hard">Hard</a></li>
+</ul>
+</li>
+<li><a href="#doubly-linked-list">Doubly Linked List</a><ul>
+<li><a href="#easy-1">Easy</a></li>
+<li><a href="#medium-1">Medium</a></li>
+<li><a href="#hard-1">Hard</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#tree">Tree</a><ul>
+<li><a href="#traverse">Traverse</a><ul>
+<li><a href="#easy-2">Easy</a></li>
+<li><a href="#medium-2">Medium</a></li>
+</ul>
+</li>
+<li><a href="#construct">Construct</a><ul>
+<li><a href="#easy-3">Easy</a></li>
+<li><a href="#medium-3">Medium</a></li>
+<li><a href="#hard-2">Hard</a></li>
+</ul>
+</li>
+<li><a href="#path--depth--flipping">Path | Depth | Flipping</a><ul>
+<li><a href="#easy-4">Easy</a></li>
+<li><a href="#medium-4">Medium</a></li>
+<li><a href="#hard-3">Hard</a></li>
+</ul>
+</li>
+<li><a href="#binary-search-tree">Binary Search Tree</a><ul>
+<li><a href="#medium-5">Medium</a></li>
+</ul>
+</li>
+<li><a href="#trie">Trie</a><ul>
+<li><a href="#medium-6">Medium</a></li>
+<li><a href="#hard-4">Hard</a></li>
+</ul>
+</li>
+<li><a href="#segment-tree">Segment Tree</a><ul>
+<li><a href="#medium-7">Medium</a></li>
+<li><a href="#hard-5">Hard</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#stack">Stack</a><ul>
+<li><a href="#basic">Basic</a><ul>
+<li><a href="#easy-5">Easy</a></li>
+<li><a href="#medium-8">Medium</a></li>
+<li><a href="#hard-6">Hard</a></li>
+</ul>
+</li>
+<li><a href="#monotonous-stack">Monotonous Stack</a><ul>
+<li><a href="#easy-6">Easy</a></li>
+<li><a href="#medium-9">Medium</a></li>
+<li><a href="#hard-7">Hard</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#heap">Heap</a><ul>
+<li><a href="#basic-1">Basic</a><ul>
+<li><a href="#easy-7">Easy</a></li>
+<li><a href="#medium-10">Medium</a></li>
+<li><a href="#hard-8">Hard</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#binary-search">Binary Search</a><ul>
+<li><a href="#easy-8">Easy</a></li>
+<li><a href="#medium-11">Medium</a></li>
+<li><a href="#hard-9">Hard</a></li>
+</ul>
+</li>
+<li><a href="#bit-operation">Bit Operation</a><ul>
+<li><a href="#easy-9">Easy</a></li>
+<li><a href="#medium-12">Medium</a></li>
+</ul>
+</li>
+<li><a href="#double-pointers--sliding-window">Double Pointers &amp; Sliding Window</a><ul>
+<li><a href="#easy-10">Easy</a></li>
+<li><a href="#medium-13">Medium</a></li>
+<li><a href="#hard-10">Hard</a></li>
+</ul>
+</li>
+<li><a href="#matrix">Matrix</a><ul>
+<li><a href="#easy-11">Easy</a></li>
+<li><a href="#medium-14">Medium</a></li>
+</ul>
+</li>
+<li><a href="#dynamic-programming">Dynamic Programming</a><ul>
+<li><a href="#1-dimension">1-Dimension</a><ul>
+<li><a href="#easy-12">Easy</a></li>
+<li><a href="#medium-15">Medium</a></li>
+<li><a href="#hard-11">Hard</a></li>
+</ul>
+</li>
+<li><a href="#2-dimension">2-Dimension</a><ul>
+<li><a href="#mediums">Mediums</a></li>
+<li><a href="#hard-12">Hard</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#graph">Graph</a><ul>
+<li><a href="#dfs">DFS</a><ul>
+<li><a href="#medium-16">Medium</a></li>
+<li><a href="#hard-13">Hard</a></li>
+</ul>
+</li>
+<li><a href="#bfs">BFS</a><ul>
+<li><a href="#easy-13">Easy</a></li>
+<li><a href="#medium-17">Medium</a></li>
+<li><a href="#hard-14">Hard</a></li>
+</ul>
+</li>
+<li><a href="#dijkstra">Dijkstra</a></li>
+<li><a href="#topological-sorting">Topological Sorting</a><ul>
+<li><a href="#medium-18">Medium</a></li>
+<li><a href="#hard-15">Hard</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#unionfind">UnionFind</a><ul>
+<li><a href="#medium-19">Medium</a></li>
+<li><a href="#hard-16">Hard</a></li>
+</ul>
+</li>
+<li><a href="#design">Design</a><ul>
+<li><a href="#easy-14">Easy</a></li>
+<li><a href="#medium-20">Medium</a></li>
+<li><a href="#hard-17">Hard</a></li>
+</ul>
+</li>
+<li><a href="#greedy">Greedy</a><ul>
+<li><a href="#medium-21">Medium</a></li>
+</ul>
+</li>
+<li><a href="#backtracking">Backtracking</a><ul>
+<li><a href="#medium-22">Medium</a></li>
+<li><a href="#hard-18">Hard</a></li>
+</ul>
+</li>
+<li><a href="#clone">Clone</a><ul>
+<li><a href="#medium-23">Medium</a></li>
+</ul>
+</li>
+<li><a href="#mathematics">Mathematics</a><ul>
+<li><a href="#easy-15">Easy</a></li>
+<li><a href="#medium-24">Medium</a></li>
+<li><a href="#hard-19">Hard</a></li>
+</ul>
+</li>
+<li><a href="#maximize--minimize">Maximize &amp; Minimize</a><ul>
+<li><a href="#easy-16">Easy</a></li>
+<li><a href="#medium-25">Medium</a></li>
+</ul>
+</li>
+<li><a href="#geometry">Geometry</a><ul>
+<li><a href="#easy-17">Easy</a></li>
+<li><a href="#medium-26">Medium</a></li>
+<li><a href="#hard-20">Hard</a></li>
+</ul>
+</li>
+</ul>
+<!-- /code_chunk_output -->
+
 <h2 id="Linked-List"><a href="#Linked-List" class="headerlink" title="Linked List"></a>Linked List</h2><h3 id="Singly-Linked-List"><a href="#Singly-Linked-List" class="headerlink" title="Singly Linked List"></a>Singly Linked List</h3><h4 id="Easy"><a href="#Easy" class="headerlink" title="Easy"></a>Easy</h4><ul>
 <li><a target="_blank" rel="noopener" href="https://leetcode.com/problems/reverse-linked-list/">206. Reverse Linked List</a></li>
 <li><a target="_blank" rel="noopener" href="https://leetcode.com/problems/linked-list-cycle/">141. Linked List Cycle</a></li>
@@ -421,7 +690,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lannywong2000.github.io/2021/12/18/LeetCode-Top300/" data-id="cl3ejke0k0004jsz255gg0jsw" data-title="LeetCode Top300" class="article-share-link">Share</a>
+      <a data-url="http://lannywong2000.github.io/2021/12/18/LeetCode-Top300/" data-id="cl3ensxoj000dywz2gtri90m3" data-title="LeetCode Top300" class="article-share-link">Share</a>
       
       
       
@@ -553,7 +822,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lannywong2000.github.io/2021/12/18/OPC-UA-Client-Server-Communication/" data-id="cl3ejke0n0009jsz2fxqt4jri" data-title="OPC UA: Client Server Communication" class="article-share-link">Share</a>
+      <a data-url="http://lannywong2000.github.io/2021/12/18/OPC-UA-Client-Server-Communication/" data-id="cl3ensxoc0009ywz207xhbm87" data-title="OPC UA: Client Server Communication" class="article-share-link">Share</a>
       
       
       
@@ -645,7 +914,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lannywong2000.github.io/2021/12/17/OPC-UA-Information-Model/" data-id="cl3ejke0l0005jsz22agzabnl" data-title="OPC UA: Information Model" class="article-share-link">Share</a>
+      <a data-url="http://lannywong2000.github.io/2021/12/17/OPC-UA-Information-Model/" data-id="cl3ensxoe000aywz2bdu0flha" data-title="OPC UA: Information Model" class="article-share-link">Share</a>
       
       
       
@@ -714,7 +983,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lannywong2000.github.io/2021/12/17/Dirty-Hexo/" data-id="cl3ejke0h0001jsz2h880fymf" data-title="Dirty Hexo" class="article-share-link">Share</a>
+      <a data-url="http://lannywong2000.github.io/2021/12/17/Dirty-Hexo/" data-id="cl3ensxnt0001ywz2dnun8ujc" data-title="Dirty Hexo" class="article-share-link">Share</a>
       
       
       
@@ -785,7 +1054,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lannywong2000.github.io/2021/12/17/OPC-UA-Introduction/" data-id="cl3ejke0n0008jsz25tm3beio" data-title="OPC UA: Introduction" class="article-share-link">Share</a>
+      <a data-url="http://lannywong2000.github.io/2021/12/17/OPC-UA-Introduction/" data-id="cl3ensxoh000cywz2cz13aee3" data-title="OPC UA: Introduction" class="article-share-link">Share</a>
       
       
       

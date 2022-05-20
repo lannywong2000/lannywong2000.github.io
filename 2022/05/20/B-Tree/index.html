@@ -6,16 +6,27 @@
   
   <title>B+ Tree | Lanny Wong</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="article">
+  <meta name="description" content="B+ Tree Insertion Deletion      B+ TreeB+ Tree is a balanced tree that is frequently used for indexing in disk management and database system.  A B+ tree node is a page containing sorted numbers.">
+<meta property="og:type" content="article">
 <meta property="og:title" content="B+ Tree">
 <meta property="og:url" content="http://lannywong2000.github.io/2022/05/20/B-Tree/index.html">
 <meta property="og:site_name" content="Lanny Wong">
+<meta property="og:description" content="B+ Tree Insertion Deletion      B+ TreeB+ Tree is a balanced tree that is frequently used for indexing in disk management and database system.  A B+ tree node is a page containing sorted numbers.">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://lannywong2000.github.io/2022/05/20/B-Tree/1.png">
+<meta property="og:image" content="http://lannywong2000.github.io/B-Tree/2.png">
+<meta property="og:image" content="http://lannywong2000.github.io/B-Tree/3.png">
+<meta property="og:image" content="http://lannywong2000.github.io/B-Tree/5.png">
+<meta property="og:image" content="http://lannywong2000.github.io/B-Tree/4.png">
+<meta property="og:image" content="http://lannywong2000.github.io/B-Tree/6.png">
+<meta property="og:image" content="http://lannywong2000.github.io/B-Tree/7.png">
+<meta property="og:image" content="http://lannywong2000.github.io/B-Tree/8.png">
 <meta property="article:published_time" content="2022-05-20T14:31:50.000Z">
-<meta property="article:modified_time" content="2022-05-20T14:32:26.911Z">
+<meta property="article:modified_time" content="2022-05-20T16:31:15.266Z">
 <meta property="article:author" content="Lanny Wong">
 <meta property="article:tag" content="Data Structures">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://lannywong2000.github.io/2022/05/20/B-Tree/1.png">
   
     <link rel="alternate" href="/atom.xml" title="Lanny Wong" type="application/atom+xml">
   
@@ -94,11 +105,102 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        
+        <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+<ul>
+<li><a href="#b-tree">B+ Tree</a><ul>
+<li><a href="#insertion">Insertion</a></li>
+<li><a href="#deletion">Deletion</a></li>
+</ul>
+</li>
+</ul>
+<!-- /code_chunk_output -->
+
+<h1 id="B-Tree"><a href="#B-Tree" class="headerlink" title="B+ Tree"></a>B+ Tree</h1><p>B+ Tree is a <strong>balanced</strong> tree that is frequently used for <strong>indexing</strong> in disk management and database system.</p>
+<ul>
+<li>A B+ tree node is a <strong>page</strong> containing <strong>sorted numbers</strong>.</li>
+<li> There are <strong>several</strong> levels of <strong>index page</strong> but <strong>one</strong> level of <strong>leaf page</strong>.</li>
+<li> All values are stored and sorted in <strong>leaf pages</strong>.</li>
+</ul>
+<p>Below is a B+ tree with height of 2, page capacity of 4 and fan out of 5.</p>
+<img src="/2022/05/20/B-Tree/1.png" class="" title="Sample B+ Tree">
+
+<h2 id="Insertion"><a href="#Insertion" class="headerlink" title="Insertion"></a>Insertion</h2><p>There are 3 scenarios of insertions as shown below.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Type</th>
+<th align="center">Leaf Page Full</th>
+<th align="center">Index Page Full</th>
+<th align="center">Operations</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center">No</td>
+<td align="center">No</td>
+<td align="center">Insert into <strong>leaf page</strong>.</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">Yes</td>
+<td align="center">No</td>
+<td align="center">1. Breakdown <strong>leaf page</strong>.<br>2. Insert <strong>mid-value</strong> into <strong>index page</strong>.<br>3. Insert values <strong>smaller</strong> than mid-value into <strong>left leaf page</strong>.<br>4. Insert values <strong>larger</strong> than or <strong>equal</strong> to mid-value into <strong>right leaf page</strong>.<br>or<br><strong>Rotate</strong> when <strong>sibling leaf pages</strong> are <strong>NOT</strong> full.</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">Yes</td>
+<td align="center">Yes</td>
+<td align="center">1. Breakdown <strong>leaf page</strong>.<br>2. Insert values <strong>smaller</strong> than mid-value into <strong>left leaf page</strong>.<br>3. Insert values <strong>larger</strong> than or <strong>equal</strong> to mid-value into <strong>right leaf page</strong>.<br>4. Breakdown <strong>index page</strong><br>5. Insert mid-value into <strong>higher index page</strong><br>5. Insert values <strong>smaller</strong> than mid-value into <strong>left index page</strong>.<br>6. Insert values <strong>larger</strong> than or <strong>equal</strong> to mid-value into <strong>right index page</strong>.</td>
+</tr>
+</tbody></table>
+<ol>
+<li>Insert 28: Type 0<br><img src="/B-Tree/2.png" alt="Insert 28">   </li>
+<li>Insert 70: Type 1<br><img src="/B-Tree/3.png" alt="Insert 70">  </li>
+<li>Insert 70: Rotate<br><img src="/B-Tree/5.png" alt="Rotate 70"></li>
+<li>Insert 95: Type 2<br><img src="/B-Tree/4.png" alt="Insert 95"></li>
+</ol>
+<h2 id="Deletion"><a href="#Deletion" class="headerlink" title="Deletion"></a>Deletion</h2><p>There are also 3 scenarios of deletion based on <strong>fill factor</strong>. The minimum setting for fill factor is <strong>0.5</strong>.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Type</th>
+<th align="center">Leaf Page Below Fill Factor</th>
+<th align="center">Index Page Below Fill Factor</th>
+<th align="center">Operations</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">0</td>
+<td align="center">No</td>
+<td align="center">No</td>
+<td align="center">Delete from <strong>leaf page</strong>. If the value is also in <strong>index page</strong>, replace it with value to its <strong>immediate right</strong>.</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">Yes</td>
+<td align="center">No</td>
+<td align="center"><strong>Merge</strong> leaf page with its siblings, <strong>update</strong> index page.</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">Yes</td>
+<td align="center">No</td>
+<td align="center">1. <strong>Merge</strong> leaf page with its siblings.<br>2. <strong>Update</strong> index page.<br>3. <strong>Merge</strong> index page and its siblings.</td>
+</tr>
+</tbody></table>
+<ol>
+<li>Delete 70: Type 0, value <strong>NOT</strong> in index page<br><img src="/B-Tree/6.png" alt="Delete 70"></li>
+<li>Delete 25: Type 0, value in index page<br><img src="/B-Tree/7.png" alt="Delete 25"></li>
+<li>Delete 60: Type 1<br><img src="/B-Tree/8.png" alt="Delete 60"></li>
+</ol>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://lannywong2000.github.io/2022/05/20/B-Tree/" data-id="cl3ejke0c0000jsz25bssczn9" data-title="B+ Tree" class="article-share-link">Share</a>
+      <a data-url="http://lannywong2000.github.io/2022/05/20/B-Tree/" data-id="cl3ensxmu0000ywz2ha014up0" data-title="B+ Tree" class="article-share-link">Share</a>
       
       
       
