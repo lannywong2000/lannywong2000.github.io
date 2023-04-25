@@ -19,8 +19,8 @@ const Header = () => {
         <h3 data-aos="fade-up">Ruoyu (Lanny) Wang</h3>
         <p data-aos="fade-up">Master of Computer Science @ UC Irvine <br /> Ex-Software Engineer Intern @ WeChat, Tencent <br /> AWS Certified Developer Associate <br /> Professional Scrum Master</p>
         <div className="header__cta" data-aos="fade-up">
-          <a href="#contact" className='btn primary'>Let's Talk</a>
-          <a href="#portfolio" className='btn light'>My Works</a>
+          <a href="#portfolio" className='btn primary'>My Works</a>
+          <a href="#contact" className='btn light'>Let's Talk</a>
         </div>
         <div className="header__socials">
           {

@@ -19,8 +19,9 @@ footer .nav__menu {
 .footer__socials a {
     width: 2.5rem;
     height: 2.5rem;
-    display: grid;
-    place-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: var(--color-black);
     color: var(--color-white);
     padding: 0.6rem;

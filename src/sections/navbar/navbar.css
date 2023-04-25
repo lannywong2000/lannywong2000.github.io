@@ -38,6 +38,10 @@ nav {
 
 /* HIDE NAV MENU ON TABLETS AND PHONES */
 @media screen and (max-width: 1024px) {
+    nav {
+        display: none;
+    }
+    
     .nav__menu {
         display: none;
     }
