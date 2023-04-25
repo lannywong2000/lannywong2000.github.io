@@ -1,12 +1,12 @@
 import {FaAward} from 'react-icons/fa'
 import {TbBooks} from 'react-icons/tb'
-import {BiHappyHeartEyes} from 'react-icons/bi'
+import {TbBrandWechat} from 'react-icons/tb'
 
 
 const data = [
-    {id: 1, icon: <FaAward/>, title: 'Experience', desc: '3+ Years Working'},
-    {id: 2, icon: <TbBooks/>, title: 'Projects', desc: '180+ Completed'},
-    {id: 3, icon: <BiHappyHeartEyes/>, title: 'Clients', desc: '70+ happy clients'}
+    {id: 1, icon: <TbBooks/>, title: 'Study', desc: '4+ Years Computer Science'},
+    {id: 2, icon: <FaAward/>, title: 'Projects', desc: '10+ Completed'},
+    {id: 3, icon: <TbBrandWechat/>, title: 'Internships', desc: 'WeChat, Tencent'}
     ]
 
 

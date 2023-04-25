@@ -7,7 +7,7 @@ const FAQ = ({faq}) => {
     const [showAnswer, setShowAnswer] = useState(false);
 
   return (
-    <Card className="faq" onClick={() => setShowAnswer(prev => !prev)}>
+    <Card className="faq light" onClick={() => setShowAnswer(prev => !prev)}>
         <div>
             <h5 className="faq__question">{faq.question}</h5>
             <button className="faq__icon">

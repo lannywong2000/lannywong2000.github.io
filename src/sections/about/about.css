@@ -76,8 +76,9 @@
 /* MEDIA QUERIES (phones) */
 @media screen and (max-width: 600px) {
 .about__cards {
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    /* grid-template-columns: 1fr 1fr;
+    gap: 1rem; */
+    display: none;
 }
 
 .about__right .btn {

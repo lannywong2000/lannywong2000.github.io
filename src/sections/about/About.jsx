@@ -33,7 +33,7 @@ const About = () => {
             which were put to test by interning as a software engineer at WeChat, Tencent. The internship solidates and intensifies my passion to become a professional software engineer. 
             Please feel welcome to contact me with any related opportunities.</p>
           <p>In my spare time, I enjoy playing table tennis and going outdoors with my friends. I am a huge music lover and play several instruments including violin, guitar, and bass.</p>
-          <a href={CV} download className="btn primary">Download CV <HiDownload /></a>
+          <a href={CV} download="Ruoyu_(Lanny)_Wang_CV" className="btn primary">Download CV <HiDownload /></a>
         </div>
       </div>
     </section>

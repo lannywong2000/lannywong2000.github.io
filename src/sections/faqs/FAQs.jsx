@@ -12,7 +12,7 @@ const FAQs = () => {
 
   return (
     <section id="faqs">
-      <h2>Frequently Asked Questions</h2>
+      <h2>Questions That Nobody Asks</h2>
       <p></p>
       <div className="container faqs__container" data-aos="fade-in">
         {
