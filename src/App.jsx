@@ -1,9 +1,8 @@
 import NavBar from "./sections/navbar/NavBar"
 import Header from "./sections/header/Header"
 import About from "./sections/about/About"
-// import Services from "./sections/services/Services"
 import Portfolio from "./sections/portfolio/Portfolio"
-import Testimonials from "./sections/testimonials/Testimonials"
+import Blogs from "./sections/blogs/Blogs"
 import FAQs from "./sections/faqs/FAQs"
 import Contact from "./sections/contact/Contact"
 import Footer from "./sections/footer/Footer"
@@ -38,8 +37,7 @@ const App = () => {
       <Header />
       <About />
       <Portfolio />
-      {/* <Services /> */}
-      <Testimonials />
+      <Blogs />
       <FAQs />
       <Contact />
       <Footer />

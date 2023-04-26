@@ -10,14 +10,14 @@ import "swiper/css/autoplay"
 import { Pagination } from "swiper";
 
 
-import testimonials from './data'
-import Testimonial from "./Testimonial";
-import './testimonials.css'
+import blogs from './data'
+import Blog from "./Blog";
+import './blogs.css'
 
 
-const Testimonials = () => {
+const Blogs = () => {
   return (
-    <section id="testimonials">
+    <section id="blogs">
       <h2>Recent Blogs</h2>
       <p>
         These are some of my recent thoughts or technical notes.
@@ -38,9 +38,9 @@ const Testimonials = () => {
         className="mySwiper"
       >
         {
-          testimonials.map(testimonial => (
-            <SwiperSlide key={testimonial.id}>
-              <Testimonial testimonial={testimonial}/>
+          blogs.map(blog => (
+            <SwiperSlide key={blog.id}>
+              <Blog blog={blog}/>
             </SwiperSlide>
           ))
         }
@@ -50,4 +50,4 @@ const Testimonials = () => {
   )
 }
 
-export default Testimonials
+export default Blogs

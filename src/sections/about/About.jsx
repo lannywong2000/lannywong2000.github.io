@@ -2,7 +2,7 @@ import "./about.css"
 import AboutPortrait from "../../assets/about.jpg"
 import CV from "../../assets/cv.pdf"
 import { HiDownload } from "react-icons/hi"
-import Card from "../../components/Card"
+import Card from "../../components/card/Card"
 import data from "./data"
 
 const About = () => {

@@ -1,6 +1,5 @@
 import CPP from '../../assets/avatars/cpp.png'
 
-
 const data = [
         {
         id: 1,
@@ -10,7 +9,5 @@ const data = [
         date: 'Apr 24, 2023'
         }
     ]
-
-
 
     export default data

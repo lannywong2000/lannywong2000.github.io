@@ -1,4 +1,4 @@
-#testimonials {
+#blogs {
     padding-bottom: 0;
 }
 
@@ -13,14 +13,14 @@
     cursor: grab;
 }
 
-.testimonial__client {
+.blog {
     display: flex;
     align-items: center;
     gap: 1rem;
     margin-top: 1.5rem;
 }
 
-.testimonial__client-avatar {
+.blog-avatar {
     width: 2.5rem;
     aspect-ratio: 1/1;
     border-radius: var(--border-radius-2);
