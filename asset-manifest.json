@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.c35231bb.css",
-    "main.js": "/static/js/main.0cbca719.js",
+    "main.js": "/static/js/main.85600de1.js",
     "static/media/about.jpg": "/static/media/about.a4d0b1f165ce016f0127.jpg",
     "static/media/header.jpg": "/static/media/header.944fd20727345b83e325.jpg",
     "static/media/techiehr.png": "/static/media/techiehr.ff42d7288ff862b4e275.png",
@@ -18,10 +18,10 @@
     "static/media/montserrat-vietnamese-400-normal.woff2": "/static/media/montserrat-vietnamese-400-normal.8f3f4c99eb0eeb5990f1.woff2",
     "index.html": "/index.html",
     "main.c35231bb.css.map": "/static/css/main.c35231bb.css.map",
-    "main.0cbca719.js.map": "/static/js/main.0cbca719.js.map"
+    "main.85600de1.js.map": "/static/js/main.85600de1.js.map"
   },
   "entrypoints": [
     "static/css/main.c35231bb.css",
-    "static/js/main.0cbca719.js"
+    "static/js/main.85600de1.js"
   ]
 }
