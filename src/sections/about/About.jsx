@@ -27,7 +27,7 @@ const About = () => {
               ))
             }
           </div>
-          <p>I am a first-year Master of Computer Science student at the University of California, Irvine. I received my Bachelor's degree in Computer Science & Technology from 
+          <p>I am a final-year Master of Computer Science student at the University of California, Irvine. I received my Bachelor's degree in Computer Science & Technology from 
             the South China University of Technology with a minor certificate in Finance. During my undergraduate, I attended the University of California, Berkeley for an international 
             study program and aced two computer science courses with a heavy workload. My education experience has equipped me with competent computer programming and problem-solving skills, 
             which were put to test by interning as a software engineer at WeChat, Tencent. The internship solidates and intensifies my passion to become a professional software engineer. 

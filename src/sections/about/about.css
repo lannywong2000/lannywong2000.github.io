@@ -22,6 +22,10 @@
     gap: 1.5rem;
 }
 
+.about__cards small {
+    white-space: pre;
+}
+
 .card.about__card {
     text-align: center;
 }
