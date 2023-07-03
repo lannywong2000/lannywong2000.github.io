@@ -1,6 +1,7 @@
 import ALBOSED from '../../assets/projects/albosed.png'
 import TECHIEHR from '../../assets/projects/techiehr.png'
 import PORTFOLIO from '../../assets/projects/portfolio.png'
+import PETERDB from '../../assets/projects/peterdb.png'
 
 const data = [
     {
@@ -14,15 +15,24 @@ const data = [
     },
     {
         id: 2,
+        category: 'Backend',
+        image: PETERDB,
+        title: "PeterDB, A Database Management System for SQL",
+        desc: " Implemented a DBMS supporting CRUD operations and versioning of tables and records from scratch using C++. Designed a hierarchy with paged file, record-based file and relation managers for bottom-up implementation. Accelerated the process of range searching by maintaining self-implemented B+ tree index files. Built a query engine realizing several relational operators.",
+        demo: 'https://github.com/lannywong2000/PeterDB',
+        github: 'https://github.com/lannywong2000/PeterDB'
+    },
+    {
+        id: 3,
         category: 'Frontend',
         image: PORTFOLIO,
-        title: "TechieHR, An Integrated Online Coding Interview Platform",
-        desc: "TechieHR is a single-page, concurrent, integrated, and interactive solution for conducting online coding interviews. It allows online code execution using the synchronized codepad and real-time communication through video conferencing and chat box. It is completed with ReactJS, NodeJS, Redis, and MongoDB and can be easily deployed using Docker.",
+        title: "Portfolio, A Modern Responsive Personal Website",
+        desc: "Designed and built resuable and interactive components using ReactJS. Enabled device-responsive positioning using CSS. Deployed on Github Pages.",
         demo: 'https://lannywong2000.github.io',
         github: 'https://github.com/lannywong2000/lannywong2000.github.io'
     },
     {
-        id: 3,
+        id: 4,
         category: 'AI / ML',
         image: ALBOSED,
         title: "Active Learning-Based Optimization of Scientific Experimental Design",
