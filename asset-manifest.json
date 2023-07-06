@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.c35231bb.css",
-    "main.js": "/static/js/main.48829fc5.js",
+    "main.css": "/static/css/main.871a8cd6.css",
+    "main.js": "/static/js/main.ef91b7a7.js",
     "static/media/about.jpg": "/static/media/about.a4d0b1f165ce016f0127.jpg",
     "static/media/header.jpg": "/static/media/header.944fd20727345b83e325.jpg",
     "static/media/techiehr.png": "/static/media/techiehr.ff42d7288ff862b4e275.png",
     "static/media/portfolio.png": "/static/media/portfolio.7410db8a0ca7221e9445.png",
     "static/media/albosed.png": "/static/media/albosed.5f89fdca0c8561cd6431.png",
     "static/media/cv.pdf": "/static/media/cv.09f9671b88f932d4ac8c.pdf",
+    "static/media/github-pages.png": "/static/media/github-pages.2a9bc7ae371567c0b6dc.png",
     "static/media/peterdb.png": "/static/media/peterdb.7e62d57d869b0ce304b4.png",
     "static/media/montserrat-all-400-normal.woff": "/static/media/montserrat-all-400-normal.327fab0afc997a2d9b16.woff",
     "static/media/xhs.png": "/static/media/xhs.40864c1a776ed96a97c8.png",
     "static/media/montserrat-latin-400-normal.woff2": "/static/media/montserrat-latin-400-normal.acb6629fe45c43ad5d8b.woff2",
-    "static/media/cpp.png": "/static/media/cpp.545db5b9ef869ac6eccb.png",
     "static/media/montserrat-latin-ext-400-normal.woff2": "/static/media/montserrat-latin-ext-400-normal.0204ec08a4b574088f02.woff2",
     "static/media/montserrat-cyrillic-ext-400-normal.woff2": "/static/media/montserrat-cyrillic-ext-400-normal.bbf9e820a2563aac0d8b.woff2",
     "static/media/montserrat-cyrillic-400-normal.woff2": "/static/media/montserrat-cyrillic-400-normal.e5c5c19c23e370a342c8.woff2",
     "static/media/xhs.svg": "/static/media/xhs.a522e7e9e2dfe04f64fa037ae882cace.svg",
     "static/media/montserrat-vietnamese-400-normal.woff2": "/static/media/montserrat-vietnamese-400-normal.8f3f4c99eb0eeb5990f1.woff2",
     "index.html": "/index.html",
-    "main.c35231bb.css.map": "/static/css/main.c35231bb.css.map",
-    "main.48829fc5.js.map": "/static/js/main.48829fc5.js.map"
+    "main.871a8cd6.css.map": "/static/css/main.871a8cd6.css.map",
+    "main.ef91b7a7.js.map": "/static/js/main.ef91b7a7.js.map"
   },
   "entrypoints": [
-    "static/css/main.c35231bb.css",
-    "static/js/main.48829fc5.js"
+    "static/css/main.871a8cd6.css",
+    "static/js/main.ef91b7a7.js"
   ]
 }
