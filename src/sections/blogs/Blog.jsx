@@ -3,6 +3,7 @@ import Card from "../../components/card/Card"
 const Blog = ({blog}) => {
   return (
     <Card>
+      <a href={blog.link} color="black">  
         <p>{blog.quote}</p>
         <div className="blog">
             <div className="blog-avatar">
@@ -13,6 +14,7 @@ const Blog = ({blog}) => {
                 <small>{blog.date}</small>
             </div>
         </div>
+      </a>
     </Card>
   )
 }

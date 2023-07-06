@@ -35,3 +35,7 @@
 .swiper-pagination-bullet {
     background: var(--color-primary);
 }
+
+#blogs a {
+    color: var(--color-black);
+}
